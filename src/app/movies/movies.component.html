@@ -1,0 +1,27 @@
+<!-- NOTE: You are free to edit this template as much as you wish as long as you keep the overall structure. 
+This view should remain a parent for the elements listed below: search box with button, data grid and details panel -->
+
+<ng-container *ngIf="moviesData$ | async as md">
+  <h2>Movies</h2>
+  
+  <form class="search-box" (submit)="userActions.search()">
+    <app-input class="inputContainer"
+      [model]="searchKeyword" 
+      [placeholder]="'Search by title'" 
+      (inputChange)="userActions.inputChange($event)">
+    </app-input>
+  
+    <app-button [disabled]="searchKeyword === ''"></app-button>
+  </form>
+  
+  <div class="tableContainer">
+    <app-movies-grid 
+      [movies]="md.movies"
+      (selectionHadler)="userActions.selectionChange($event)"
+      (clearHandler)="userActions.clearSelection()"
+      [activeMovie]="md.movie?.imdbID">
+    </app-movies-grid>
+    
+    <app-movie-details [movie]="md.movie" *ngIf="md.movie"></app-movie-details>
+  </div>
+</ng-container>

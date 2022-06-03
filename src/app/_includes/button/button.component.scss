@@ -1,0 +1,22 @@
+.button {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #2a71bb;
+    border: 0;
+    color: white;
+    border-radius: 4px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    &:hover:not(:disabled) {
+      background-color: #3494fc;
+    }
+    &:active:not(:disabled) {
+      background-color: #007bff;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }

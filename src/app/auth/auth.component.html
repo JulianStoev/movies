@@ -1,0 +1,13 @@
+<form class="authContainer" (submit)="userActions.submit()">
+    <h1 class="title">Authorization</h1>
+
+    <app-input 
+        [model]="apiKey" 
+        [placeholder]="'Your API key'" 
+        (inputChange)="userActions.inputChange($event)">
+    </app-input>
+
+    <div class="buttonContainer">
+        <app-button [disabled]="apiKey === ''"></app-button>
+    </div>
+</form>

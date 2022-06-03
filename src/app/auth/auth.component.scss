@@ -1,0 +1,22 @@
+.authContainer {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255,255,255,0.3);
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  .title {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5em;
+    color: #5983b5;
+    text-shadow: 1px 1px 0 white;
+  }
+  .buttonContainer {
+    margin-top: 1em;
+    text-align: center;
+  }
+}

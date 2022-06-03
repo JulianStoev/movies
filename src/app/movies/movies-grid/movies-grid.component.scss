@@ -1,0 +1,37 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    tr, td {
+        transition: 0.2s ease;
+    }
+    tr {
+        &:nth-child(odd) {
+            background-color: #f5f9fd;
+        }
+        &.header {
+            color: white;
+            font-weight: bold;
+            background-color: #2a71bb;
+        }
+        &.clickable {
+            cursor: pointer;
+        }
+        &.active {
+            color: white;
+            background-color: #5d93ce;
+            pointer-events: none;
+        }
+        &:not(.active):not(.header):hover td {
+            background-color: #e2e5e7;
+        }
+    }
+    td {
+        padding: 5px;
+        border-spacing: 0;
+        border-bottom: 1px solid #ccc;
+    }
+}
+.clearButton {
+    margin-top: 1em;
+    display: inline-block;
+}

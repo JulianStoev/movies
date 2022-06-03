@@ -1,0 +1,35 @@
+.movieContainer {
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 0;
+    border-width: 0px 0px 1px 1px;
+    border-color: white;
+    border-style: solid;
+    border-bottom-left-radius: 4px;
+    backdrop-filter: blur(16px);
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: -1px 5px 10px rgba(0,0,0,0.2);
+    animation: showMovieInfo 0.2s ease forwards;
+    .movieColumn {
+        margin-bottom: 0.5em;
+        list-style: none;
+        .title {
+            font-weight: bold;;
+        }
+    }
+}
+@keyframes showMovieInfo {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}

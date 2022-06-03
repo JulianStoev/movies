@@ -1,0 +1,8 @@
+<ul class="movieContainer" *ngIf="movie">
+    <ng-container *ngFor="let f of fields; trackBy: ngTracker.track.bind(this)">
+        <li class="movieColumn" *ngIf="movie[f] !== undefined">
+            <div class="title">{{f}}</div>
+            {{movie[f]}}
+        </li>
+    </ng-container>
+</ul>

@@ -1,0 +1,17 @@
+.search-box {
+  display: flex;
+  align-items: center;
+}
+.inputContainer {
+  margin-right: 1em;
+  flex: 1;
+}
+.tableContainer {
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  min-height: 370px;
+  box-sizing: border-box;
+  background-color: white;
+}

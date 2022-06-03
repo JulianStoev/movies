@@ -1,0 +1,29 @@
+<!-- NOTE: Button must be enabled if there is a row selected in the data grid. -->
+
+<table class="table">
+  <tr class="header">
+    <td>Title</td>
+    <td>Year</td>
+    <td>Type</td>
+    <td>imdbID</td>
+  </tr>
+  <ng-container *ngIf="movies && movies[0]">
+    <tr 
+      class="clickable" 
+      *ngFor="let m of movies; trackBy: ngTracker.track.bind(this, 'imdbID')" 
+      (click)="onSelectionChanged(m.imdbID)"
+      [ngClass]="{active: activeMovie === m.imdbID}">
+      <td>{{m.Title}}</td>
+      <td>{{m.Year}}</td>
+      <td>{{m.Type}}</td>
+      <td>{{m.imdbID}}</td>
+    </tr>
+  </ng-container>
+</table>
+
+<app-button 
+  class="clearButton"
+  [label]="'Clear Selection'" 
+  [disabled]="!activeMovie" 
+  (click)="clearSelection()">
+</app-button>

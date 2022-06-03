@@ -1,0 +1,23 @@
+
+# Assignment
+
+You are given a skeleton of an Angular application. Its purpose is to enable the user to search the IMDB database for movies by specified title and visualise the detaila about the movies. Please go through the "OMDb Demo Assignment.pdf" for the complete user workflow.
+
+When you go through the code, please pay attention to the TODO and NOTE comments. They contain important guidelines and requirements about the functionality of the services and componenst which you should implement/enrich.
+
+For data retrieval we will be using this open restful API: http://www.omdbapi.com/#usage. It supports various search queries. The API requires API key to be provided with each request. For this purpose we have generated an API key in advance - see the "Important Info" section below.
+
+Before the user opens the main view, the app should requie the user to enter the API key in a dedicated screen. This will serve as a very simple auth mechanism. The user-entered API key should be stored in session storage and used for all requests to the OMDb API. Please see comments in the skeleton of auth service and auth component for more details. An important requirement is to disallow the user to visit the main screen at /movies path unless he enters valid AIP key for OMDb.
+
+The main screen consists of search input and button, data grid and details panel. This skeleton uses Ag-Grid lirary (https://www.ag-grid.com/angular-data-grid/getting-started/) but you are free to use any other framework for the data grid. Make sure you are meeting the funtional requirements - single row selection and clear selection button. Also you are not allowed to use a built-in details panel for the data grid. The requirement is to implement a detail view of your own - see the movie details component.
+
+# Bonus tasks
+
+- Implement error handling for the requests to OMDb so that a meaningful error is shown to the user in case of request failure/erroneous response. 
+- Implement unit tests for a service and for a componenst of your choice.
+
+# Important Info
+
+API key for authoriation: 7f687444
+OMDb API: http://www.omdbapi.com/#usage
+AG-Grid: https://www.ag-grid.com/angular-data-grid/packages/
